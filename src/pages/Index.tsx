@@ -7,8 +7,7 @@ import CriteriaSection from "@/components/CriteriaSection";
 import SelectionProcess from "@/components/SelectionProcess";
 import InstructionsSection from "@/components/InstructionsSection";
 import QuotesSection from "@/components/QuotesSection";
-import CTASection from "@/components/CTASection";
-import CountdownTimer from "@/components/CountdownTimer";
+import CountdownCTASection from "@/components/CountdownCTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -27,10 +26,9 @@ const Index = () => {
         <SelectionProcess />
         <InstructionsSection />
         <QuotesSection />
-        <CTASection applicationUrl={applicationUrl} />
+        <CountdownCTASection applicationUrl={applicationUrl} />
       </main>
       <Footer />
-      <CountdownTimer />
     </div>
   );
 };
