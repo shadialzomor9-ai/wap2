@@ -12,9 +12,29 @@ const AboutSection = () => {
     icon: Building2,
     title: "الممولون",
     desc: "بعثة الإتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه"
-  }, {
+  },
+     const infoCards = [
+  {
+    icon: Building2,
+    title: "الممولون",
+    desc: "بعثة الاتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه",
+    logos: [
+      {
+        name: "بعثة الاتحاد الأوروبي",
+        src: "/logos/eu.png",
+        alt: "EU Delegation to Yemen"
+      },
+      {
+        name: "مجموعة هائل سعيد أنعم وشركاه",
+        src: "/logos/hsa.png",
+        alt: "HSA Group"
+      }
+    ]
+  }
+]                
+                     {
     icon: Calendar,
-    title: "المدة",
+    title: "المنفذون",
     desc: "5 مسرعات خلال 5 سنوات"
   }, {
     icon: Users,
