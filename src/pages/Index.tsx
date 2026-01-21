@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   // Application URL - configurable
-  const applicationUrl = "#";
+  const applicationUrl = "https://ee.kobotoolbox.org/x/JZ7MJNoG";
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <HeroSection />
+        <HeroSection applicationUrl={applicationUrl} />
         <AboutSection />
         <ObjectivesSection />
         <BenefitsSection />
