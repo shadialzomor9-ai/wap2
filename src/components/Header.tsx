@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-const Header = () => {
+interface HeaderProps {
+  applicationUrl?: string;
+}
+
+const Header = ({ applicationUrl = "#" }: HeaderProps) => {
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -34,13 +38,14 @@ const Header = () => {
         </nav>
 
         {/* CTA Button */}
-        <motion.button
+        <motion.a
+          href={applicationUrl}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="btn-glow px-6 py-2.5 rounded-lg font-bold text-primary-foreground"
         >
           قدّم الآن
-        </motion.button>
+        </motion.a>
       </div>
     </motion.header>
   );
