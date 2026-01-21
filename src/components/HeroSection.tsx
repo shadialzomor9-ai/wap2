@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Rocket, Sparkles, Zap } from "lucide-react";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  applicationUrl?: string;
+}
+
+const HeroSection = ({ applicationUrl = "#" }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
@@ -108,16 +112,17 @@ const HeroSection = () => {
           </motion.div>
 
           {/* CTA Button */}
-          <motion.button
+          <motion.a
+            href={applicationUrl}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-glow px-10 py-4 rounded-xl font-bold text-lg text-primary-foreground"
+            className="inline-block btn-glow px-10 py-4 rounded-xl font-bold text-lg text-primary-foreground"
           >
             قدّم الآن
-          </motion.button>
+          </motion.a>
         </div>
       </div>
 
