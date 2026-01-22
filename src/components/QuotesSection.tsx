@@ -9,8 +9,6 @@ const QuotesSection = () => {
     once: true,
     margin: "-100px"
   });
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   // Placeholder quotes - content to be added later
 
   return <section className="py-24 relative" ref={ref}>
