@@ -24,7 +24,12 @@ const AboutSection = () => {
   }, {
     icon: Calendar,
     title: "المنفذون",
-    desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات"
+    desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات",
+    logos: [{
+      name: "روّاد الأعمال وديب روت",
+      src: "/src/assets/executors-logo.png",
+      alt: "Rowad & Deep Root"
+    }]
   }, {
     icon: Users,
     title: "المستفيدون",
