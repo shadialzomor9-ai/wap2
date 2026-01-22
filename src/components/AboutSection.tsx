@@ -27,7 +27,7 @@ const AboutSection = () => {
     desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات",
     logos: [{
       name: "روّاد الأعمال وديب روت",
-      src: "/src/assets/executors-logo.png",
+      src: "https://rowad.org/public/rowad32.png",
       alt: "Rowad & Deep Root"
     }]
   }, {
