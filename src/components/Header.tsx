@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
-
 interface HeaderProps {
   applicationUrl?: string;
 }
-
-const Header = ({ applicationUrl = "#" }: HeaderProps) => {
-  return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/50"
-    >
+const Header = ({
+  applicationUrl = "#"
+}: HeaderProps) => {
+  return <motion.header initial={{
+    y: -100,
+    opacity: 0
+  }} animate={{
+    y: 0,
+    opacity: 1
+  }} transition={{
+    duration: 0.6,
+    ease: "easeOut"
+  }} className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo Placeholder */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-primary">
-            <span className="text-primary-foreground font-bold text-xl">و</span>
-          </div>
-          <span className="text-xl font-bold glow-text">وثبة</span>
+          
+          <span className="text-xl font-bold glow-text">مسرّعة وثبة</span>
         </div>
 
         {/* Navigation */}
@@ -38,17 +39,14 @@ const Header = ({ applicationUrl = "#" }: HeaderProps) => {
         </nav>
 
         {/* CTA Button */}
-        <motion.a
-          href={applicationUrl}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="btn-glow px-6 py-2.5 rounded-lg font-bold text-primary-foreground"
-        >
+        <motion.a href={applicationUrl} whileHover={{
+        scale: 1.05
+      }} whileTap={{
+        scale: 0.95
+      }} className="btn-glow px-6 py-2.5 rounded-lg font-bold text-primary-foreground">
           قدّم الآن
         </motion.a>
       </div>
-    </motion.header>
-  );
+    </motion.header>;
 };
-
 export default Header;
