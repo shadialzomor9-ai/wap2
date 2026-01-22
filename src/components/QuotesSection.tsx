@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronRight, ChevronLeft, Quote } from "lucide-react";
+import companiesLogos from "@/assets/companies-logos.png";
 
 const QuotesSection = () => {
   const ref = useRef(null);
@@ -57,6 +58,20 @@ const QuotesSection = () => {
             قالوا عن <span className="text-primary">البرنامج</span>
           </h2>
           <div className="divider-glow mx-auto w-32 mb-8" />
+        </motion.div>
+
+        {/* Companies Logos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-5xl mx-auto mb-16"
+        >
+          <img 
+            src={companiesLogos} 
+            alt="شركات المشاركين في البرنامج" 
+            className="w-full h-auto rounded-2xl"
+          />
         </motion.div>
 
         {/* Carousel */}
