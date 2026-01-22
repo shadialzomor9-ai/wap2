@@ -8,11 +8,6 @@ const AboutSection = () => {
     once: true,
     margin: "-100px"
   });
-  const infoCards = [{
-    icon: Building2,
-    title: "الممولون",
-    desc: "بعثة الإتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه"
-  },
      const infoCards = [
   {
     icon: Building2,
