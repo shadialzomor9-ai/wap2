@@ -22,9 +22,18 @@ const AboutSection = () => {
       alt: "HSA Group"
     }]
   }, {
-    icon: Calendar,
+     icon: Building2,
     title: "المنفذون",
-    desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات"
+    desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات",
+    logos: [{
+      name: "ديب روت",
+      src: "https://rowad.org/public/deep.png",
+      alt: "DeepRoot"
+    }, {
+      name: "مؤسسة روّاد الاعمال",
+      src: "https://rowad.org/public/rowad.png",
+      alt: "ROWAD"
+    }]
   }, {
     icon: Users,
     title: "المستفيدون",
