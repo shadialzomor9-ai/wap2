@@ -51,8 +51,7 @@ const QuotesSection = () => {
       } : {}} transition={{
         duration: 0.6
       }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">الشركات الناشئة المشاركة في
-  الدفعة الاولى من البرنامج<span className="text-primary">  الدفعة الاولى 2025</span>
+          <h2 className="text-4xl font-bold mb-6 glow-text md:text-3xl">الشركات الناشئة المشاركة في الدفعة  الاولى 20لدفعة الاولى 2025 الدفعة الاولى 2025 <span className="text-primary">  الدفعة الاولى 2025</span>
           </h2>
           <div className="divider-glow mx-auto w-32 mb-8" />
         </motion.div>
