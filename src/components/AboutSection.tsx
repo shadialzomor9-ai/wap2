@@ -42,7 +42,6 @@ const AboutSection = () => {
   );
 }
 
-export default AboutSection;
 export default infoCards;
   return <section id="about" className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-50" />
