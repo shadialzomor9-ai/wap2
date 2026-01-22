@@ -7,7 +7,7 @@ const InstructionsSection = () => {
     once: true,
     margin: "-100px"
   });
-  return <section className="py-24 relative" ref={ref}>
+  return <section className="relative py-[38px]" ref={ref}>
       <div className="container mx-auto px-4 relative z-10">
         
       </div>
