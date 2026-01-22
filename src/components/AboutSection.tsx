@@ -8,7 +8,7 @@ const AboutSection = () => {
     once: true,
     margin: "-100px"
   });
-  const infoCards = [
+    const infoCards = [
     {
       icon: Building2,
       title: "الممولون",
@@ -18,27 +18,30 @@ const AboutSection = () => {
         { name: "مجموعة هائل سعيد أنعم وشركاه", src: "/hsa.png", alt: "HSA Group" }
       ]
     },
-    {
-      icon: Calendar,
-      title: "المنفذون",
-      desc: "5 مسرعات خلال 5 سنوات"
-    },
-    {
-      icon: Users,
-      title: "المستفيدون",
-      desc: "أفضل 10 شركات ناشئة في كل دفعة"
-    },
-    {
-      icon: MapPin,
-      title: "التنفيذ",
-      desc: "6 أشهر لكل مسرّعة"
-    }
+    { icon: Calendar, title: "المنفذون", desc: "5 مسرعات خلال 5 سنوات" },
+    { icon: Users, title: "المستفيدون", desc: "أفضل 10 شركات ناشئة في كل دفعة" },
+    { icon: MapPin, title: "التنفيذ", desc: "6 أشهر لكل مسرّعة" }
   ];
 
   return (
-    <div>
-      {/* كود JSX لعرض infoCards */}
-    </div>
+    <section>
+      <div>
+        {infoCards.map((card, index) => (
+          <div key={index}>
+            <card.icon />
+            <h3>{card.title}</h3>
+            <p>{card.desc}</p>
+            {card.logos && (
+              <div>
+                {card.logos.map((logo, i) => (
+                  <img key={i} src={logo.src} alt={logo.alt} />
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
