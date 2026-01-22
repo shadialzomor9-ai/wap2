@@ -24,7 +24,7 @@ const AboutSection = () => {
   }, {
     icon: Calendar,
     title: "المنفذون",
-    desc: "5 مسرعات خلال 5 سنوات"
+    desc: "مؤسسة روّاد الاعمال بالشركة مع ديب روت للاستشارات"
   }, {
     icon: Users,
     title: "المستفيدون",
