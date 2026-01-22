@@ -37,7 +37,7 @@ const QuotesSection = () => {
   const prevSlide = () => {
     setCurrentIndex(prev => (prev - 1 + quotes.length) % quotes.length);
   };
-  return <section className="relative py-[20px]" ref={ref}>
+  return <section className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-30" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -52,7 +52,7 @@ const QuotesSection = () => {
         duration: 0.6
       }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">الشركات الناشئة المشاركة في
-  الدفعة الاولى 2025<span className="text-primary">  الدفعة الاولى 2025</span>
+  الدفعة الاولى من البرنامج<span className="text-primary">  الدفعة الاولى 2025</span>
           </h2>
           <div className="divider-glow mx-auto w-32 mb-8" />
         </motion.div>
