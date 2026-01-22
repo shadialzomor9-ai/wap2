@@ -8,7 +8,9 @@ const AboutSection = () => {
     once: true,
     margin: "-100px"
   });
-     const infoCards = [
+    import { Building2, Calendar, Users, MapPin } from "lucide-react";
+
+const infoCards = [
   {
     icon: Building2,
     title: "الممولون",
@@ -22,24 +24,28 @@ const AboutSection = () => {
       {
         name: "مجموعة هائل سعيد أنعم وشركاه",
         src: "/hsa.png",
-        alt: "HSA Group" 
+        alt: "HSA Group"
       }
     ]
-  }
-],
-                     {
+  },
+  {
     icon: Calendar,
     title: "المنفذون",
     desc: "5 مسرعات خلال 5 سنوات"
-  }, {
+  },
+  {
     icon: Users,
     title: "المستفيدون",
     desc: "أفضل 10 شركات ناشئة في كل دفعة"
-  }, {
+  },
+  {
     icon: MapPin,
     title: "التنفيذ",
     desc: "6 أشهر لكل مسرّعة"
-  }];
+  }
+];
+
+export default infoCards;
   return <section id="about" className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-50" />
       
