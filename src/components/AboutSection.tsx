@@ -22,8 +22,11 @@ const AboutSection = () => {
       {
         name: "مجموعة هائل سعيد أنعم وشركاه",
         src: "/hsa.png",
-        alt: "HSA Group"
-      },            
+        alt: "HSA Group" 
+      }
+    ]
+  }
+],
                      {
     icon: Calendar,
     title: "المنفذون",
