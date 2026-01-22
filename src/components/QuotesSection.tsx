@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ChevronRight, ChevronLeft, Quote } from "lucide-react";
-import companiesLogos from "@/assets/companies-logos.png";
-const QuotesSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "-100px"
-  });
   // Placeholder quotes - content to be added later
 
   return <section className="py-24 relative" ref={ref}>
