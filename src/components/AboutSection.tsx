@@ -104,7 +104,7 @@ const AboutSection = () => {
               <h3 className="text-lg font-bold text-foreground mb-2">{card.title}</h3>
               <p className="text-muted-foreground text-sm">{card.desc}</p>
               {card.logos && <div className="flex justify-center gap-4 mt-2">
-                  {card.logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.alt} className="h-20 border-0 object-cover w-15" />)}
+                  {card.logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.alt} className="h-20 border-0 w-15 object-contain" />)}
                 </div>}
             </motion.div>)}
         </div>
