@@ -13,7 +13,7 @@ const AboutSection = () => {
       title: "الممولون",
       desc: "بعثة الاتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه",
       logos: [
-        { name: "بعثة الاتحاد الأوروبي", src: "/eu.png", alt: "EU Delegation to Yemen" },
+        { name: "بعثة الاتحاد الأوروبي", src: "public/EU-08.png", alt: "EU Delegation to Yemen" },
         { name: "مجموعة هائل سعيد أنعم وشركاه", src: "public/hsa.png", alt: "HSA Group" }
       ]
     },
