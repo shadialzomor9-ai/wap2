@@ -12,31 +12,7 @@ const QuotesSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Placeholder quotes - content to be added later
-  const quotes = [{
-    id: 1,
-    text: "اقتباس من أحد رواد الأعمال المشاركين في البرنامج سيتم إضافته لاحقاً",
-    author: "اسم المشارك",
-    role: "المنصب - اسم الشركة",
-    image: null
-  }, {
-    id: 2,
-    text: "اقتباس من أحد رواد الأعمال المشاركين في البرنامج سيتم إضافته لاحقاً",
-    author: "اسم المشارك",
-    role: "المنصب - اسم الشركة",
-    image: null
-  }, {
-    id: 3,
-    text: "اقتباس من أحد رواد الأعمال المشاركين في البرنامج سيتم إضافته لاحقاً",
-    author: "اسم المشارك",
-    role: "المنصب - اسم الشركة",
-    image: null
-  }];
-  const nextSlide = () => {
-    setCurrentIndex(prev => (prev + 1) % quotes.length);
-  };
-  const prevSlide = () => {
-    setCurrentIndex(prev => (prev - 1 + quotes.length) % quotes.length);
-  };
+
   return <section className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-30" />
       
@@ -52,7 +28,7 @@ const QuotesSection = () => {
         duration: 0.6
       }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">الشركات الناشئة المشاركة في
-  الدفعة الاولى من البرنامج<span className="text-primary">  الدفعة الاولى 2025</span>
+  <span className="text-primary">الدفعة الاولى 2025</span>
           </h2>
           <div className="divider-glow mx-auto w-32 mb-8" />
         </motion.div>
