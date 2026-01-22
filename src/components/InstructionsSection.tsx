@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+<--import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ClipboardList, AlertCircle } from "lucide-react";
@@ -32,12 +32,12 @@ const InstructionsSection = () => {
           </div>
 
           {/* Note Card */}
-          <motion.div
+          <---motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-secondary/50 rounded-2xl p-6 border border-primary/30"
-          >
+          --->
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                 <AlertCircle className="w-5 h-5 text-primary" />
@@ -56,4 +56,4 @@ const InstructionsSection = () => {
   );
 };
 
-export default InstructionsSection;
+export default InstructionsSection;--->
