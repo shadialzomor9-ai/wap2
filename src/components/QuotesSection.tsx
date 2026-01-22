@@ -4,45 +4,10 @@ import { useRef, useState } from "react";
 import { ChevronRight, ChevronLeft, Quote } from "lucide-react";
 import companiesLogos from "@/assets/companies-logos.png";
 
-const QuotesSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [currentIndex, setCurrentIndex] = useState(0);
+
 
   // Placeholder quotes - content to be added later
-  const quotes = [
-    {
-      id: 1,
-      text: "اقتباس من أحد رواد الأعمال المشاركين في البرنامج سيتم إضافته لاحقاً",
-      author: "اسم المشارك",
-      role: "المنصب - اسم الشركة",
-      image: null,
-    },
-    {
-      id: 2,
-      text: "اقتباس من أحد رواد الأعمال المشاركين في البرنامج سيتم إضافته لاحقاً",
-      author: "اسم المشارك",
-      role: "المنصب - اسم الشركة",
-      image: null,
-    },
-    {
-      id: 3,
-      text: "اقتباس من أحد رواد الأعمال المشاركين في البرنامج سيتم إضافته لاحقاً",
-      author: "اسم المشارك",
-      role: "المنصب - اسم الشركة",
-      image: null,
-    },
-  ];
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % quotes.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + quotes.length) % quotes.length);
-  };
-
-  return (
+  
     <section className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-30" />
       
@@ -55,7 +20,7 @@ const QuotesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
-            قالوا عن <span className="text-primary">البرنامج</span>
+            الشركات الناشئة المشاركة في <span className="text-primary">الدفعة السابقة</span>
           </h2>
           <div className="divider-glow mx-auto w-32 mb-8" />
         </motion.div>
