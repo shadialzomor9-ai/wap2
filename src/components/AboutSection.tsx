@@ -14,7 +14,7 @@ const AboutSection = () => {
       desc: "بعثة الاتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه",
       logos: [
         { name: "بعثة الاتحاد الأوروبي", src: "/eu.png", alt: "EU Delegation to Yemen" },
-        { name: "مجموعة هائل سعيد أنعم وشركاه", src: "https://github.com/shadialzomor9-ai/wap2/blob/main/src/components/hsa.png", alt: "HSA Group" }
+        { name: "مجموعة هائل سعيد أنعم وشركاه", src: "public/hsa.png", alt: "HSA Group" }
       ]
     },
     { icon: Calendar, title: "المنفذون", desc: "5 مسرعات خلال 5 سنوات" },
