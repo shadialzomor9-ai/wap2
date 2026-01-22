@@ -21,12 +21,12 @@ const AboutSection = () => {
     logos: [
       {
         name: "بعثة الاتحاد الأوروبي",
-        src: "/logos/eu.png",
+        src: "/eu.png",
         alt: "EU Delegation to Yemen"
       },
       {
         name: "مجموعة هائل سعيد أنعم وشركاه",
-        src: "/logos/hsa.png",
+        src: "/hsa.png",
         alt: "HSA Group"
       }
     ]
