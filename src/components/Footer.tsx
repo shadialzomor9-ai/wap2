@@ -6,7 +6,8 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">و</span>
+              <span className="text-primary-foreground font-bold">
+            </span>
             </div>
             <span className="text-lg font-bold">مسرّعة الأعمال وثبة</span>
           </div>
