@@ -55,6 +55,16 @@ const QuotesSection = () => {
           <div className="divider-glow mx-auto w-32 mb-8" />
         </motion.div>
 
+        {/* Section Title */}
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground"
+        >
+          الشركات الناشئة المشاركة في الدفعة الاولى 2025
+        </motion.h2>
+
         {/* Companies Logos */}
         <motion.div initial={{
         opacity: 0,
