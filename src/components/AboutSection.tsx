@@ -14,11 +14,11 @@ const AboutSection = () => {
     desc: "بعثة الاتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه",
     logos: [{
       name: "بعثة الاتحاد الأوروبي",
-      src: "public/EU-08.png",
+      src: "https://rowad.org/public/EU-08.png",
       alt: "EU Delegation to Yemen"
     }, {
       name: "مجموعة هائل سعيد أنعم وشركاه",
-      src: "public/hsa.png",
+      src: "https://rowad.org/public/hsa.png",
       alt: "HSA Group"
     }]
   }, {
