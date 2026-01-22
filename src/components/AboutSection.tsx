@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Building2, Calendar, Users, MapPin } from "lucide-react";
+
 const AboutSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: "-100px"
-  });
-    const infoCards = [
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const infoCards = [
     {
       icon: Building2,
       title: "الممولون",
@@ -24,42 +23,17 @@ const AboutSection = () => {
   ];
 
   return (
-    <section>
-      <div>
-        {infoCards.map((card, index) => (
-          <div key={index}>
-            <card.icon />
-            <h3>{card.title}</h3>
-            <p>{card.desc}</p>
-            {card.logos && (
-              <div>
-                {card.logos.map((logo, i) => (
-                  <img key={i} src={logo.src} alt={logo.alt} />
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export default infoCards;
-  return <section id="about" className="py-24 relative" ref={ref}>
+    <section id="about" className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-50" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} animate={isInView ? {
-        opacity: 1,
-        y: 0
-      } : {}} transition={{
-        duration: 0.6
-      }} className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
             عن <span className="text-primary">مسرّعة الأعمال وثبة</span>
           </h2>
@@ -67,16 +41,12 @@ export default infoCards;
         </motion.div>
 
         {/* Main Description */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} animate={isInView ? {
-        opacity: 1,
-        y: 0
-      } : {}} transition={{
-        duration: 0.6,
-        delay: 0.2
-      }} className="max-w-4xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto mb-16"
+        >
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 glow-border">
             <p className="text-lg md:text-xl leading-relaxed text-foreground/90 mb-6">
               مسرّعة الأعمال وثبة هو أحد مكونات برنامج وثبة الممول من بعثة الإتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه ويُنفذه مؤسسة روّاد الأعمال بالشراكة مع ديب رووت للاستشارات.
@@ -89,30 +59,37 @@ export default infoCards;
 
         {/* Info Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {infoCards.map((card, index) => <motion.div key={index} initial={{
-          opacity: 0,
-          y: 30
-        }} animate={isInView ? {
-          opacity: 1,
-          y: 0
-        } : {}} transition={{
-          duration: 0.5,
-          delay: 0.3 + index * 0.1
-        }} whileHover={{
-          y: -5
-        }} className="bg-card rounded-xl p-6 border border-border/50 card-glow text-center">
-              <motion.div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center" whileHover={{
-            rotate: 360
-          }} transition={{
-            duration: 0.5
-          }}>
+          {infoCards.map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-card rounded-xl p-6 border border-border/50 card-glow text-center"
+            >
+              <motion.div
+                className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+              >
                 <card.icon className="w-8 h-8 text-primary" />
               </motion.div>
               <h3 className="text-lg font-bold text-foreground mb-2">{card.title}</h3>
               <p className="text-muted-foreground text-sm">{card.desc}</p>
-            </motion.div>)}
+              {card.logos && (
+                <div className="flex justify-center gap-4 mt-2">
+                  {card.logos.map((logo, i) => (
+                    <img key={i} src={logo.src} alt={logo.alt} className="h-10 object-contain" />
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;
