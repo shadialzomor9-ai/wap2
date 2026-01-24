@@ -118,7 +118,7 @@ const AboutSection = () => {
                   }} transition={{
                     duration: 0.3
                   }}>
-                          <img src={logo.src} alt={logo.alt} className="h-28 md:h-35 w-auto object-contain" />
+                          <img src={logo.src} alt={logo.alt} className="h-23 md:h-30 w-auto object-contain" />
                         </motion.div>)}
                     </div>
                   </div>
