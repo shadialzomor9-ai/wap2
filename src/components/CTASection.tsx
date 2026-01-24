@@ -67,7 +67,7 @@ const CTASection = ({
               </h2>
 
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                لاتفوت الفرصة انضم الآن إلى مسرّعة الأعمال وثبة
+                لاتفوت الفرصة وانضم الآن إلى مسرّعة الأعمال وثبة
               </p>
 
               <motion.a href={applicationUrl} whileHover={{
