@@ -1,58 +1,57 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Calendar, Users, MapPin } from "lucide-react";
+import { Landmark, Rocket } from "lucide-react";
+import executorsLogo from "@/assets/executors-logo.png";
+
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
     margin: "-100px"
   });
-  const infoCards = [{
-    icon: Building2,
-    title: "الممولون",
-    desc: "بعثة الاتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه",
-    logos: [{
-      name: "بعثة الاتحاد الأوروبي",
-      src: "https://rowad.org/public/EU-08.png",
-      alt: "EU Delegation to Yemen"
-    }, {
-      name: "مجموعة هائل سعيد أنعم وشركاه",
-      src: "https://rowad.org/public/hsa.png",
-      alt: "HSA Group"
-    }]
-  }, {
-    icon: Calendar,
-    title: "المنفذون",
-    desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات",
-    logos: [{
-      name: "روّاد الأعمال وديب روت",
-      src: "https://rowad.org/public/rowad32.png",
-      alt: "Rowad & Deep Root"
-    }]
-  }, {
-    icon: Users,
-    title: "المستفيدون",
-    desc: "أفضل 10 شركات ناشئة في كل دفعة"
-  }, {
-    icon: MapPin,
-    title: "التنفيذ",
-    desc: "6 أشهر لكل مسرّعة"
-  }];
-  return <section id="about" className="py-24 relative" ref={ref}>
+
+  const institutionalCards = [
+    {
+      icon: Landmark,
+      title: "الممولون",
+      desc: "بعثة الاتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه",
+      logos: [
+        {
+          src: "https://rowad.org/public/EU-08.png",
+          alt: "EU Delegation to Yemen"
+        },
+        {
+          src: "https://rowad.org/public/hsa.png",
+          alt: "HSA Group"
+        }
+      ]
+    },
+    {
+      icon: Rocket,
+      title: "المنفذون",
+      desc: "مؤسسة روّاد الاعمال بالشراكة مع ديب روت للاستشارات",
+      logos: [
+        {
+          src: executorsLogo,
+          alt: "Rowad & Deep Root"
+        }
+      ]
+    }
+  ];
+
+  return (
+    <section id="about" className="py-24 relative" ref={ref}>
       <div className="absolute inset-0 bg-gradient-radial opacity-50" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} animate={isInView ? {
-        opacity: 1,
-        y: 0
-      } : {}} transition={{
-        duration: 0.6
-      }} className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
             عن <span className="text-primary">مسرّعة الأعمال وثبة</span>
           </h2>
@@ -60,16 +59,12 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Main Description */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} animate={isInView ? {
-        opacity: 1,
-        y: 0
-      } : {}} transition={{
-        duration: 0.6,
-        delay: 0.2
-      }} className="max-w-4xl mx-auto mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto mb-16"
+        >
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 glow-border">
             <p className="text-lg md:text-xl leading-relaxed text-foreground/90 mb-6">
               مسرّعة الأعمال وثبة هو أحد مكونات برنامج وثبة الممول من بعثة الإتحاد الأوروبي لدى اليمن ومجموعة هائل سعيد أنعم وشركاه وتُنفذه مؤسسة روّاد الأعمال بالشراكة مع ديب رووت للاستشارات.
@@ -80,35 +75,70 @@ const AboutSection = () => {
           </div>
         </motion.div>
 
-        {/* Info Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {infoCards.map((card, index) => <motion.div key={index} initial={{
-          opacity: 0,
-          y: 30
-        }} animate={isInView ? {
-          opacity: 1,
-          y: 0
-        } : {}} transition={{
-          duration: 0.5,
-          delay: 0.3 + index * 0.1
-        }} whileHover={{
-          y: -5
-        }} className="bg-card rounded-xl p-6 border border-border/50 card-glow text-center">
-              <motion.div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center" whileHover={{
-            rotate: 360
-          }} transition={{
-            duration: 0.5
-          }}>
-                <card.icon className="w-8 h-8 text-primary" />
-              </motion.div>
-              <h3 className="text-lg font-bold text-foreground mb-2">{card.title}</h3>
-              <p className="text-muted-foreground text-sm">{card.desc}</p>
-              {card.logos && <div className="flex justify-center gap-4 mt-2">
-                  {card.logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.alt} className="h-20 border-0 w-15 object-contain" />)}
-                </div>}
-            </motion.div>)}
+        {/* Institutional Cards - 2 Cards Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {institutionalCards.map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.3 + index * 0.15 }}
+              className="group relative"
+            >
+              {/* Card Container */}
+              <div className="relative bg-card/60 backdrop-blur-md rounded-2xl p-8 border border-border/40 overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)]">
+                {/* Subtle gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Corner accent */}
+                <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-br-full" />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Icon & Title Row */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <motion.div 
+                      className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_hsl(var(--primary)/0.2)]"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <card.icon className="w-7 h-7 text-primary" />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-foreground">{card.title}</h3>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground text-base leading-relaxed mb-8">
+                    {card.desc}
+                  </p>
+
+                  {/* Logos Section */}
+                  <div className="pt-6 border-t border-border/30">
+                    <div className={`flex items-center justify-center gap-8 ${card.logos.length === 1 ? '' : 'flex-wrap'}`}>
+                      {card.logos.map((logo, i) => (
+                        <motion.div
+                          key={i}
+                          className="bg-white/5 rounded-xl p-4 backdrop-blur-sm border border-border/20 hover:border-primary/30 transition-all duration-300"
+                          whileHover={{ scale: 1.03, y: -2 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            className="h-16 md:h-20 w-auto object-contain"
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;
