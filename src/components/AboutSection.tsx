@@ -16,9 +16,6 @@ const AboutSection = () => {
     logos: [{
       src: "https://rowad.org/public/EU-08.png",
       alt: "EU Delegation to Yemen"
-    }, {
-      src: "https://rowad.org/public/hsa.png",
-      alt: "HSA Group"
     }]
   }, {
     icon: Rocket,
