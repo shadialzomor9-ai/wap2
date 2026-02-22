@@ -4,7 +4,7 @@ import { Clock } from "lucide-react";
 
 const CountdownTimer = () => {
   const startDate = new Date("2026-01-24T00:00:00").getTime();
-  const endDate = new Date("2025-02-25T23:59:00").getTime();
+  const endDate = new Date("2026-02-24T00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
