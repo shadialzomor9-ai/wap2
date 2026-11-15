@@ -2,68 +2,31 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Clock } from "lucide-react";
 
-export const APPLICATION_START_DATE = new Date("2026-11-17T00:00:00+03:00").getTime();
-export const APPLICATION_END_DATE = new Date("2026-12-20T00:00:00+03:00").getTime();
+export const APPLICATION_START_DATE = new Date("2026-11-15T07:37:00Z").getTime();
+export const APPLICATION_DURATION = ((33 * 24 + 10) * 60 * 60 + 24 * 60 + 25) * 1000;
+export const APPLICATION_END_DATE = APPLICATION_START_DATE + APPLICATION_DURATION;
+
+export const getCountdown = (now: number) => {
+  const distance = Math.max(0, APPLICATION_END_DATE - now);
+  return {
+    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((distance % (1000 * 60)) / 1000),
+    hasEnded: distance === 0,
+  };
+};
 
 const CountdownTimer = () => {
-  const startDate = APPLICATION_START_DATE;
-  const endDate = APPLICATION_END_DATE;
-
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-    hasStarted: false,
-    hasEnded: false,
-  });
+  const [timeLeft, setTimeLeft] = useState(() => getCountdown(Date.now()));
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      
-      // Check if we haven't started yet
-      if (now < startDate) {
-        const distance = startDate - now;
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000),
-          hasStarted: false,
-          hasEnded: false,
-        });
-        return;
-      }
-
-      // Check if ended
-      if (now >= endDate) {
-        setTimeLeft({
-          days: 0,
-          hours: 0,
-          minutes: 0,
-          seconds: 0,
-          hasStarted: true,
-          hasEnded: true,
-        });
-        clearInterval(timer);
-        return;
-      }
-
-      // Calculate time remaining
-      const distance = endDate - now;
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000),
-        hasStarted: true,
-        hasEnded: false,
-      });
-    }, 1000);
+    const update = () => setTimeLeft(getCountdown(Date.now()));
+    update();
+    const timer = setInterval(update, 1000);
 
     return () => clearInterval(timer);
-  }, [startDate, endDate]);
+  }, []);
 
   const timeBlocks = [
     { label: "يوم", value: timeLeft.days },
@@ -84,7 +47,7 @@ const CountdownTimer = () => {
         <div className="flex items-center gap-2 mb-3 justify-center">
           <Clock className="w-4 h-4 text-primary" />
           <span className="text-sm font-medium text-primary">
-            {!timeLeft.hasStarted ? "يبدأ التقديم خلال" : timeLeft.hasEnded ? "انتهى التقديم" : "ينتهي التقديم خلال"}
+            {timeLeft.hasEnded ? "انتهى التقديم" : "ينتهي التقديم بعد:"}
           </span>
         </div>
 
