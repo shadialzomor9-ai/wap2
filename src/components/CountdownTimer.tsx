@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Clock } from "lucide-react";
 
+export const APPLICATION_START_DATE = new Date("2026-11-17T00:00:00+03:00").getTime();
+export const APPLICATION_END_DATE = new Date("2026-12-20T00:00:00+03:00").getTime();
+
 const CountdownTimer = () => {
-  const startDate = new Date("2026-01-24T00:00:00").getTime();
-  const endDate = new Date("2026-02-26T00:00:00").getTime();
+  const startDate = APPLICATION_START_DATE;
+  const endDate = APPLICATION_END_DATE;
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
