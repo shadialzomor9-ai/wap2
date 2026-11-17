@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronRight, ChevronLeft, Quote } from "lucide-react";
-import companiesLogos from "@/assets/companies-logos.png";
+import companiesLogos from "@/assets/companies-logos-batch1-2026.png.asset.json";
 const QuotesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -76,7 +76,7 @@ const QuotesSection = () => {
         duration: 0.6,
         delay: 0.2
       }} className="max-w-5xl mx-auto mb-16">
-          <img src={companiesLogos} alt="شركات المشاركين في البرنامج" className="w-full h-auto rounded-2xl" />
+          <img src={companiesLogos.url} alt="شركات المشاركين في البرنامج" className="w-full h-auto rounded-2xl" />
         </motion.div>
 
         {/* Carousel */}
