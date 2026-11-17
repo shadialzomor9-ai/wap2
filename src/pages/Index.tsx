@@ -7,6 +7,7 @@ import CriteriaSection from "@/components/CriteriaSection";
 import SelectionProcess from "@/components/SelectionProcess";
 import InstructionsSection from "@/components/InstructionsSection";
 import QuotesSection from "@/components/QuotesSection";
+import CompaniesSection2 from "@/components/CompaniesSection2";
 import CTASection from "@/components/CTASection";
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
@@ -27,6 +28,7 @@ const Index = () => {
         <SelectionProcess />
         <InstructionsSection />
         <QuotesSection />
+        <CompaniesSection2 />
         <CTASection applicationUrl={applicationUrl} />
       </main>
       <Footer />
