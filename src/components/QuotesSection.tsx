@@ -62,7 +62,7 @@ const QuotesSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground"
         >
-          الشركات الناشئة المشاركة في الدفعة الاولى 2026
+          الشركات الناشئة المشاركة في الدفعة الثانية 2026
         </motion.h2>
 
         {/* Companies Logos */}
