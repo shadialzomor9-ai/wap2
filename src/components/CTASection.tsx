@@ -70,7 +70,7 @@ const CTASection = ({
                 لاتفوت الفرصة وانضم الآن إلى مسرّعة الأعمال وثبة
               </p>
 
-              <motion.a href={applicationUrl} whileHover={{
+              <motion.a href={applicationUrl} target="_blank" rel="noopener noreferrer" whileHover={{
               scale: 1.05
             }} whileTap={{
               scale: 0.95

@@ -12,6 +12,8 @@ describe("Application destinations", () => {
     expect(links).toHaveLength(3);
     for (const link of links) {
       expect(link.href).toBe("https://ee.kobotoolbox.org/x/BDS6feIf");
+      expect(link.target).toBe("_blank");
+      expect(link.rel).toContain("noopener");
     }
   });
 });

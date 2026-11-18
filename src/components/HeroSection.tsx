@@ -130,7 +130,7 @@ const HeroSection = ({
           </motion.div>
 
           {/* CTA Button */}
-          <motion.a href={applicationUrl} initial={{
+          <motion.a href={applicationUrl} target="_blank" rel="noopener noreferrer" initial={{
           opacity: 0,
           scale: 0.8
         }} animate={{
