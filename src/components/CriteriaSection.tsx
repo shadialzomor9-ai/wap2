@@ -91,7 +91,7 @@ const CriteriaSection = () => {
             معايير <span className="text-primary">الاختيار</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-            معايير اختيار الشركات الناشئة المحتملة لمسرّعة الأعمال وثبة – الدفعة 2
+            معايير اختيار الشركات الناشئة المحتملة لمسرّعة الأعمال وثبة – الدفعة 3
           </p>
           <div className="divider-glow mx-auto w-32 mb-8" />
         </motion.div>
